@@ -1,2 +1,2 @@
-exploree
+explore.js
 ========
