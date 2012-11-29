@@ -1,0 +1,1 @@
+var example={scope:null,message:function(a){a.log&&console.log(a.log);a.msg&&(document.getElementById("viewport").innerHTML=a.msg)},foo:function(a){this.bar=a.bar}},foo=new example.foo({bar:"public"});example.init=function(){example.scope=foo.bar;example.message({msg:example.scope,log:example.scope})};document.addEventListener("DOMContentLoaded",example.init,!1);

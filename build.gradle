@@ -13,16 +13,16 @@ def jsSrcDir = 'source'
 
 combineJs {
     source = fileTree(jsSrcDir)
-    dest = file("build/combine.js")
+    dest = file("release/combine.js")
 }
 
 minifyJs {
 	source = combineJs
-	dest = file("build/minify.js")
+	dest = file("release/minify.js")
 }
 
 gzipJs {
 	source = minifyJs
-	dest = file("build/gzip.js")
+	dest = file("release/gzip.js")
 }
 
