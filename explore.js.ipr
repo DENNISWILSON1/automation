@@ -4,16 +4,18 @@
     <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
-      <entry name="?*.properties" />
-      <entry name="?*.xml" />
-      <entry name="?*.gif" />
-      <entry name="?*.png" />
-      <entry name="?*.jpeg" />
-      <entry name="?*.jpg" />
       <entry name="?*.html" />
+      <entry name="?*.properties" />
+      <entry name="?*.gif" />
+      <entry name="?*.jpeg" />
+      <entry name="!?*.groovy" />
+      <entry name="?*.png" />
+      <entry name="?*.jpg" />
       <entry name="?*.dtd" />
       <entry name="?*.tld" />
+      <entry name="?*.xml" />
       <entry name="?*.ftl" />
+      <entry name="!?*.java" />
     </wildcardResourcePatterns>
     <annotationProcessing enabled="false" useClasspath="true" />
   </component>
@@ -159,7 +161,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
