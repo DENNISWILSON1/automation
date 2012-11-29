@@ -13,11 +13,11 @@ example.foo = function(args)
 	this.bar = args.bar;
 };
 
-var public = new example.foo({ bar: 'public' });
+var foo = new example.foo({ bar: 'public' });
 
 example.init = function(args)
 {
-	example.scope = public.bar;
+	example.scope = foo.bar;
 	example.message({ msg:example.scope, log:example.scope });
 };
 

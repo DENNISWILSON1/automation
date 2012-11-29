@@ -9,18 +9,20 @@ buildscript {
 
 apply plugin: 'js'
 
-def jsSrcDir = './'
+def jsSrcDir = 'source'
 
 combineJs {
     source = fileTree(jsSrcDir)
-    dest = file("all.js")
+    dest = file("build/combine.js")
 }
 
 minifyJs {
-	source = './example.js'
-	dest = file('./example.mini.js')
-	closure {
-		warninglevel = 'QUIET'
-	}
+	source = combineJs
+	dest = file("build/minify.js")
+}
+
+gzipJs {
+	source = minifyJs
+	dest = file("build/gzip.js")
 }
 
