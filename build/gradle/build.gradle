@@ -1,0 +1,28 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.eriwen:gradle-js-plugin:1.1'
+	}
+}
+
+apply plugin: 'js'
+
+def jsSrcDir = 'source'
+
+combineJs {
+    source = fileTree(jsSrcDir)
+    dest = file("release/combine.js")
+}
+
+minifyJs {
+	source = combineJs
+	dest = file("release/minify.js")
+}
+
+gzipJs {
+	source = minifyJs
+	dest = file("release/gzip.js")
+}
+
